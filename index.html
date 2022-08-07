@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+    <title>Hyper-Text</title>
+    <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
@@ -35,7 +36,10 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="collapseNavbarid">
-        <ul class="navbar-nav mr-auto mt-2 w-50 d-flex justify-content-around">
+        <ul
+          class="navbar-nav mr-auto mt-2 w-50 d-flex justify-content-center ulli"
+          style="margin-left: auto; margin-right: 20px"
+        >
           <li class="nav-item active">
             <a href="#" class="nav-link font-weight-bold"
               >Home <span class="sr-only">(current)</span></a
@@ -50,56 +54,164 @@
           <li class="nav-item">
             <a href="#" class="nav-link font-weight-bold">Help</a>
           </li>
+          <li class="nav-item" style="margin-top: 7px">
+            <div class="custom-control custom-switch mr-5" id="dark-mode">
+              <input
+                type="checkbox"
+                class="custom-control-input"
+                id="selector"
+              />
+              <label for="selector" class="custom-control-label"
+                >Dark Mode</label
+              >
+            </div>
+          </li>
         </ul>
-
-        <div class="custom-control custom-switch mr-5">
-          <input type="checkbox" class="custom-control-input" id="selector" />
-          <label for="selector" class="custom-control-label">Dark Mode</label>
-        </div>
       </div>
     </nav>
 
-    <div class="container" id="content" style="margin-top: 30px">
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque quo
-      quibusdam officiis provident, suscipit voluptas iusto culpa facilis vitae.
-      Dicta facilis a porro. Voluptatum facilis quam illo labore consectetur
-      quibusdam. Odio itaque delectus deleniti eius optio sequi quis dignissimos
-      nostrum? Doloremque nesciunt quaerat quod tenetur quae commodi, inventore
-      debitis repellendus magnam laborum quia tempore, quo id, placeat sint
-      assumenda minima? Provident atque nobis rerum deleniti placeat fugiat illo
-      suscipit neque, quidem quia. Nulla fugit facere earum velit nesciunt
-      molestias nisi reiciendis, impedit hic, esse sunt laborum? Doloremque quo
-      voluptas nisi! Cumque harum nemo blanditiis laborum distinctio autem non
-      molestiae officiis mollitia quisquam, dicta, quia quasi labore provident
-      dolorem ipsam id aliquid quas saepe fuga minus nesciunt a ullam rem.
-      Neque? Culpa neque voluptatem consequatur, corporis commodi minima sequi
-      deleniti ab provident quae? Tempora, dignissimos rerum facilis laboriosam
-      voluptatum autem alias ad architecto veniam nesciunt deleniti modi
-      laudantium, voluptate ratione similique. Magni dolores ad recusandae quis
-      excepturi labore necessitatibus architecto provident iste aut libero
-      accusamus, aperiam facilis mollitia. Repellat libero dignissimos et, cum
-      eos sint odit? Facere quod voluptas odio atque? Nihil, odio adipisci vel
-      omnis cupiditate repellat ipsam earum consectetur a possimus deserunt
-      dolorem cumque modi quia excepturi molestias rem eos dignissimos nemo
-      deleniti illum provident quasi maxime nulla? Illum? Perspiciatis accusamus
-      temporibus cum dolorum laudantium explicabo vitae quos saepe! Natus, odit
-      suscipit earum beatae vitae fugit sunt numquam quos fugiat, culpa fuga
-      eligendi maiores rem molestias eos? Eveniet, veritatis! Dicta debitis
-      tenetur laborum, reiciendis, expedita cum consequuntur quae, illo odit
-      facere mollitia labore praesentium minima iusto! Id hic, inventore facere
-      est labore maxime iusto sequi nesciunt corporis repudiandae explicabo?
-      Eligendi doloribus iusto odit nulla aspernatur iste amet modi! Facilis ex
-      et ullam, vitae cupiditate modi eligendi voluptas eaque tenetur magnam,
-      iste voluptates veritatis quisquam repellat eum accusamus nam aspernatur.
-    </div>
+    <main>
+      <div class="container" id="content" style="margin-top: 30px">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque quo
+        quibusdam officiis provident, suscipit voluptas iusto culpa facilis
+        vitae. Dicta facilis a porro. Voluptatum facilis quam illo labore
+        consectetur quibusdam. Odio itaque delectus deleniti eius optio sequi
+        quis dignissimos nostrum? Doloremque nesciunt quaerat quod tenetur quae
+        commodi, inventore debitis repellendus magnam laborum quia tempore, quo
+        id, placeat sint assumenda minima? Provident atque nobis rerum deleniti
+        placeat fugiat illo suscipit neque, quidem quia. Nulla fugit facere
+        earum velit nesciunt molestias nisi reiciendis, impedit hic, esse sunt
+        laborum? Doloremque quo voluptas nisi! Cumque harum nemo blanditiis
+        laborum distinctio autem non molestiae officiis mollitia quisquam,
+        dicta, quia quasi labore provident dolorem ipsam id aliquid quas saepe
+        fuga minus nesciunt a ullam rem. Neque? Culpa neque voluptatem
+        consequatur, corporis commodi minima sequi deleniti ab provident quae?
+        Tempora, dignissimos rerum facilis laboriosam voluptatum autem alias ad
+        architecto veniam nesciunt deleniti modi laudantium, voluptate ratione
+        similique. Magni dolores ad recusandae quis excepturi labore
+        necessitatibus architecto provident iste aut libero accusamus, aperiam
+        facilis mollitia. Repellat libero dignissimos et, cum eos sint odit?
+        Facere quod voluptas odio atque? Nihil, odio adipisci vel omnis
+        cupiditate repellat ipsam earum consectetur a possimus deserunt dolorem
+        cumque modi quia excepturi molestias rem eos dignissimos nemo deleniti
+        illum provident quasi maxime nulla? Illum? Perspiciatis accusamus
+        temporibus cum dolorum laudantium explicabo vitae quos saepe! Natus,
+        odit suscipit earum beatae vitae fugit sunt numquam quos fugiat, culpa
+        fuga eligendi maiores rem molestias eos? Eveniet, veritatis! Dicta
+        debitis tenetur laborum, reiciendis, expedita cum consequuntur quae,
+        illo odit facere mollitia labore praesentium minima iusto! Id hic,
+        inventore facere est labore maxime iusto sequi nesciunt corporis
+        repudiandae explicabo? Eligendi doloribus iusto odit nulla aspernatur
+        iste amet modi! Facilis ex et ullam, vitae cupiditate modi eligendi
+        voluptas eaque tenetur magnam, iste voluptates veritatis quisquam
+        repellat eum accusamus nam aspernatur.
+      </div>
+    </main>
+
+    <footer
+      class="footer-light pt-5 pb-4"
+      style="background-color: #f2f2f2; margin-top: 30px"
+    >
+      <div class="container text-center text-med-left">
+        <div class="row text-center text-md-left">
+          <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h5 class="text-uppercase mb-4 font-weight-bold text-warning">
+              Hyper text
+            </h5>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime
+              necessitatibus ex nihil hic ab quae maiores perferendis
+              exercitationem nostrum voluptas. Doloribus quidem unde voluptatum
+              vero sequi et minima, repudiandae facere.
+            </p>
+          </div>
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h5 class="text-uppercase mb-4 font-weight-bold text-warning">
+              Products
+            </h5>
+            <p>
+              <a href="#" class="footer-a" style="text-decoration: none"
+                >Lnk 1</a
+              >
+            </p>
+            <p>
+              <a href="#" class="footer-a" style="text-decoration: none"
+                >Lnk 2</a
+              >
+            </p>
+            <p>
+              <a href="#" class="footer-a" style="text-decoration: none"
+                >Lnk 3</a
+              >
+            </p>
+          </div>
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h5 class="text-uppercase mb-4 font-weight-bold text-warning">
+              Useful Links
+            </h5>
+            <p>
+              <a href="#" class="footer-a" style="text-decoration: none"
+                >Lnk 1</a
+              >
+            </p>
+            <p>
+              <a href="#" class="footer-a" style="text-decoration: none"
+                >Lnk 2</a
+              >
+            </p>
+            <p>
+              <a href="#" class="footer-a" style="text-decoration: none"
+                >Lnk 3</a
+              >
+            </p>
+          </div>
+        </div>
+        <hr class="mb-4" />
+        <div class="row align-items-center">
+          <div class="col-md-7 col-lg-12">
+            <p>Copyright 2022 All rights reserved</p>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <script>
       $(document).ready(function () {
-        $("#selector").change(function () {
+        console.log(window.localStorage.getItem("dark"));
+        if (
+          window.localStorage.getItem("dark") === null ||
+          window.localStorage.getItem("dark") === "light"
+        ) {
+          console.log("null");
+          window.localStorage.setItem("dark", "light");
+        } else {
+          console.log("true");
+          $("#selector").attr("checked", true);
           $("body").toggleClass("bg-secondary");
           $("nav").toggleClass("navbar-dark bg-dark");
           $(".custom-control-label").toggleClass("text-white");
           $("#content").toggleClass("text-white");
+          $("footer").toggleClass("navbar-dark bg-dark");
+          $("footer").toggleClass("text-white");
+          $(".footer-a").toggleClass("text-white");
+          $("hr").toggleClass("bg-light");
+        }
+        $("#selector").change(function () {
+          if (window.localStorage.getItem("dark") === "light") {
+            window.localStorage.setItem("dark", "dark");
+          } else {
+            window.localStorage.setItem("dark", "light");
+            console.log("false done");
+          }
+
+          $("body").toggleClass("bg-secondary");
+          $("nav").toggleClass("navbar-dark bg-dark");
+          $(".custom-control-label").toggleClass("text-white");
+          $("#content").toggleClass("text-white");
+          $("footer").toggleClass("navbar-dark bg-dark");
+          $("footer").toggleClass("text-white");
+          $(".footer-a").toggleClass("text-white");
+          $("hr").toggleClass("bg-light");
         });
       });
     </script>

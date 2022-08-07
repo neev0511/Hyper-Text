@@ -1,0 +1,11 @@
+          $("#dark-mode").innerHTML = `
+            <input
+                type="checkbox"
+                class="custom-control-input"
+                id="selector"
+                checked
+              /> Hello
+              <label for="selector" class="custom-control-label"
+                >Dark Mode</label
+              >
+          `;
