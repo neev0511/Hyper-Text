@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    />
+
+    <!-- jQuery library -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+      <a href="#" class="navbar-brand font-weight-bold">The Provider</a>
+      <button
+        class="navbar-toggler d-lg-none"
+        type="button"
+        data-toggle="collapse"
+        data-target="#collapseNavbarid"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapseNavbarid">
+        <ul class="navbar-nav mr-auto mt-2 w-50 d-flex justify-content-around">
+          <li class="nav-item active">
+            <a href="#" class="nav-link font-weight-bold"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link font-weight-bold">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link font-weight-bold">Contact </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link font-weight-bold">Help</a>
+          </li>
+        </ul>
+
+        <div class="custom-control custom-switch mr-5">
+          <input type="checkbox" class="custom-control-input" id="selector" />
+          <label for="selector" class="custom-control-label">Dark Mode</label>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container" id="content" style="margin-top: 30px">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque quo
+      quibusdam officiis provident, suscipit voluptas iusto culpa facilis vitae.
+      Dicta facilis a porro. Voluptatum facilis quam illo labore consectetur
+      quibusdam. Odio itaque delectus deleniti eius optio sequi quis dignissimos
+      nostrum? Doloremque nesciunt quaerat quod tenetur quae commodi, inventore
+      debitis repellendus magnam laborum quia tempore, quo id, placeat sint
+      assumenda minima? Provident atque nobis rerum deleniti placeat fugiat illo
+      suscipit neque, quidem quia. Nulla fugit facere earum velit nesciunt
+      molestias nisi reiciendis, impedit hic, esse sunt laborum? Doloremque quo
+      voluptas nisi! Cumque harum nemo blanditiis laborum distinctio autem non
+      molestiae officiis mollitia quisquam, dicta, quia quasi labore provident
+      dolorem ipsam id aliquid quas saepe fuga minus nesciunt a ullam rem.
+      Neque? Culpa neque voluptatem consequatur, corporis commodi minima sequi
+      deleniti ab provident quae? Tempora, dignissimos rerum facilis laboriosam
+      voluptatum autem alias ad architecto veniam nesciunt deleniti modi
+      laudantium, voluptate ratione similique. Magni dolores ad recusandae quis
+      excepturi labore necessitatibus architecto provident iste aut libero
+      accusamus, aperiam facilis mollitia. Repellat libero dignissimos et, cum
+      eos sint odit? Facere quod voluptas odio atque? Nihil, odio adipisci vel
+      omnis cupiditate repellat ipsam earum consectetur a possimus deserunt
+      dolorem cumque modi quia excepturi molestias rem eos dignissimos nemo
+      deleniti illum provident quasi maxime nulla? Illum? Perspiciatis accusamus
+      temporibus cum dolorum laudantium explicabo vitae quos saepe! Natus, odit
+      suscipit earum beatae vitae fugit sunt numquam quos fugiat, culpa fuga
+      eligendi maiores rem molestias eos? Eveniet, veritatis! Dicta debitis
+      tenetur laborum, reiciendis, expedita cum consequuntur quae, illo odit
+      facere mollitia labore praesentium minima iusto! Id hic, inventore facere
+      est labore maxime iusto sequi nesciunt corporis repudiandae explicabo?
+      Eligendi doloribus iusto odit nulla aspernatur iste amet modi! Facilis ex
+      et ullam, vitae cupiditate modi eligendi voluptas eaque tenetur magnam,
+      iste voluptates veritatis quisquam repellat eum accusamus nam aspernatur.
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        $("#selector").change(function () {
+          $("body").toggleClass("bg-secondary");
+          $("nav").toggleClass("navbar-dark bg-dark");
+          $(".custom-control-label").toggleClass("text-white");
+          $("#content").toggleClass("text-white");
+        });
+      });
+    </script>
+  </body>
+</html>
