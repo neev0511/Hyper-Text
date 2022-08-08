@@ -82,15 +82,15 @@
     <main>
       <div class="container" id="content" style="margin-top: 30px">
         <main class="form-signin w-100 m-auto">
-          <form class="form">
-            <div class="login" id="login">
+          <form class="form" onsubmit="login()" id="login" action="#">
+            <div class="login">
               <h1 class="h3 mb-3 fw-normal">Log In</h1>
 
               <div class="form-floating">
                 <input
                   type="email"
                   class="form-control"
-                  id="floatingInput"
+                  id="login_email"
                   placeholder="name@example.com"
                 />
                 <label for="floatingInput">Email address</label>
@@ -99,7 +99,7 @@
                 <input
                   type="password"
                   class="form-control"
-                  id="floatingPassword"
+                  id="login_password"
                   placeholder="Password"
                 />
                 <label for="floatingPassword">Password</label>
@@ -121,14 +121,17 @@
                 >
               </p>
             </div>
-            <div class="signup" id="signup">
+          </form>
+
+          <form class="form" onsubmit="signup()" id="signup" action="#">
+            <div class="signup">
               <h1 class="h3 mb-3 fw-normal">Sign Up</h1>
 
               <div class="form-floating">
                 <input
                   type="text"
                   class="form-control"
-                  id="floatingInput"
+                  id="signup_name"
                   placeholder="Neev Jain"
                 />
                 <label for="floatingInput">Full Name</label>
@@ -137,7 +140,7 @@
                 <input
                   type="email"
                   class="form-control"
-                  id="floatingInput"
+                  id="signup_email"
                   placeholder="name@example.com"
                 />
                 <label for="floatingInput">Email address</label>
@@ -146,7 +149,7 @@
                 <input
                   type="password"
                   class="form-control"
-                  id="floatingPassword"
+                  id="signup_password"
                   placeholder="Password"
                 />
                 <label for="floatingPassword">Password</label>
@@ -246,6 +249,16 @@
       $(document).ready(function () {
         dark_light();
       });
+
+      function login() {
+        console.log(document.getElementById("login_email").value);
+        console.log(document.getElementById("login_password").value);
+      }
+      function signup() {
+        console.log(document.getElementById("signup_name").value);
+        console.log(document.getElementById("signup_email").value);
+        console.log(document.getElementById("signup_password").value);
+      }
 
       function change_to_login() {
         console.log("change_to_login");

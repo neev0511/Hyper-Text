@@ -56,7 +56,7 @@
     margin-left: 40%;
   }
 
-  .signup {
+  #signup {
     display: none;
   }
   @media screen and (max-width: 1050px) {
