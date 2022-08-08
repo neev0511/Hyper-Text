@@ -14,3 +14,12 @@
 .ulli {
     gap: 20px;
 }
+
+.favicon {
+    width: 30px;
+    margin-top: -3px;
+    margin-left: -40px;
+}
+#selector,#selector2{
+    display: block;
+}
