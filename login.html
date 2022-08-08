@@ -253,7 +253,6 @@
     <script src="script.js"></script>
     <script>
       $(document).ready(function () {
-        window.localStorage.clear();
         dark_light();
         check_login();
       });
@@ -301,7 +300,10 @@
       }
       function change_to_signup() {
         document.getElementById("success").innerHTML = "";
-        if (window.localStorage.getItem("login") === "false") {
+        if (
+          window.localStorage.getItem("login") === "false" ||
+          window.localStorage.getItem("login") === null
+        ) {
           console.log("change_to_login");
           document.getElementById("signup").style.display = "block";
           document.getElementById("login").style.display = "none";
