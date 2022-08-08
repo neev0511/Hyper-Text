@@ -261,7 +261,10 @@
         const email = document.getElementById("login_email").value;
         const pass = document.getElementById("login_password").value;
         console.log("Redirecting");
-        if (window.localStorage.getItem("login") === "false") {
+        if (
+          window.localStorage.getItem("login") === "false" ||
+          window.localStorage.getItem("login") === null
+        ) {
           if (
             window.localStorage.getItem("email") === email &&
             window.localStorage.getItem("pass") === pass
