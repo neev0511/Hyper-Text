@@ -54,3 +54,24 @@ function colorChange() {
   $("hr").toggleClass("bg-light");
   changeImg();
 }
+function check_login() {
+  const full_name = window.localStorage.getItem("name");
+  if (window.localStorage.getItem("login") === "true") {
+    var nav_log = document.getElementById("nav_login");
+    nav_log.innerHTML =
+      '<a class="nav-link active" onclick="logout()" href="#">Hi ' +
+      full_name +
+      "</a>";
+  }
+}
+
+function logout() {
+  if (confirm("Do you want to logout?")) {
+    window.localStorage.setItem("login", "false");
+    var nav_log = document.getElementById("nav_login");
+    nav_log.innerHTML =
+      '<a href="login.html" class="nav-link font-weight-bold">Log In/Sign Up</a>';
+
+    location.reload();
+  }
+}

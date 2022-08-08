@@ -53,7 +53,7 @@
           <li class="nav-item">
             <a href="#" class="nav-link font-weight-bold">Contact </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" id="nav_login">
             <a href="login.html" class="nav-link font-weight-bold active"
               >Log In/Sign Up</a
             >
@@ -81,6 +81,7 @@
 
     <main>
       <div class="container" id="content" style="margin-top: 30px">
+        <div id="success"></div>
         <main class="form-signin w-100 m-auto">
           <form class="form" onsubmit="login()" id="login" action="#">
             <div class="login">
@@ -92,6 +93,7 @@
                   class="form-control"
                   id="login_email"
                   placeholder="name@example.com"
+                  required
                 />
                 <label for="floatingInput">Email address</label>
               </div>
@@ -101,6 +103,7 @@
                   class="form-control"
                   id="login_password"
                   placeholder="Password"
+                  required
                 />
                 <label for="floatingPassword">Password</label>
               </div>
@@ -133,6 +136,7 @@
                   class="form-control"
                   id="signup_name"
                   placeholder="Neev Jain"
+                  required
                 />
                 <label for="floatingInput">Full Name</label>
               </div>
@@ -142,6 +146,7 @@
                   class="form-control"
                   id="signup_email"
                   placeholder="name@example.com"
+                  required
                 />
                 <label for="floatingInput">Email address</label>
               </div>
@@ -151,6 +156,7 @@
                   class="form-control"
                   id="signup_password"
                   placeholder="Password"
+                  required
                 />
                 <label for="floatingPassword">Password</label>
               </div>
@@ -248,27 +254,60 @@
     <script>
       $(document).ready(function () {
         dark_light();
+        check_login();
       });
 
       function login() {
-        console.log(document.getElementById("login_email").value);
-        console.log(document.getElementById("login_password").value);
+        const email = document.getElementById("login_email").value;
+        const pass = document.getElementById("login_password").value;
+        console.log("Redirecting");
+        if (window.localStorage.getItem("login") === "false") {
+          if (
+            window.localStorage.getItem("email") === email &&
+            window.localStorage.getItem("pass") === pass
+          ) {
+            document.getElementById("success").innerHTML =
+              "<div class='alert alert-success' role='alert'>You have been successfully logged in!</div>";
+            window.localStorage.setItem("login", "true");
+            check_login();
+          } else {
+            document.getElementById("success").innerHTML =
+              "<div class='alert alert-danger' role='alert'>Your email or password is incorrect</div>";
+          }
+        } else {
+          document.getElementById("success").innerHTML =
+            "<div class='alert alert-danger' role='alert'>You have already logged in</div>";
+        }
       }
+
       function signup() {
-        console.log(document.getElementById("signup_name").value);
-        console.log(document.getElementById("signup_email").value);
-        console.log(document.getElementById("signup_password").value);
+        document.getElementById("success").innerHTML = "";
+        const name = document.getElementById("signup_name").value;
+        const email = document.getElementById("signup_email").value;
+        const pass = document.getElementById("signup_password").value;
+        window.localStorage.setItem("name", name);
+        window.localStorage.setItem("pass", pass);
+        window.localStorage.setItem("email", email);
+        document.getElementById("success").innerHTML =
+          "<div class='alert alert-success' role='alert'>You have been successfully signed up!</div>";
       }
 
       function change_to_login() {
+        document.getElementById("success").innerHTML = "";
         console.log("change_to_login");
         document.getElementById("signup").style.display = "none";
         document.getElementById("login").style.display = "block";
       }
       function change_to_signup() {
-        console.log("change_to_login");
-        document.getElementById("signup").style.display = "block";
-        document.getElementById("login").style.display = "none";
+        document.getElementById("success").innerHTML = "";
+        if (window.localStorage.getItem("login") === "false") {
+          console.log("change_to_login");
+          document.getElementById("signup").style.display = "block";
+          document.getElementById("login").style.display = "none";
+        } else {
+          document.getElementById("success").innerHTML =
+            "<div class='alert alert-danger' role='alert'>You have already logged in</div>";
+        }
       }
     </script>
   </body>
