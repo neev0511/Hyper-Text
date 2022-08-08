@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hyper-Text</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/login_style.css" />
+
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
@@ -40,7 +42,7 @@
           class="navbar-nav justify-content-center ulli"
           style="margin-right: -20px; margin-top: 2px"
         >
-          <li class="nav-item active">
+          <li class="nav-item">
             <a href="index.html" class="nav-link font-weight-bold"
               >Home <span class="sr-only">(current)</span></a
             >
@@ -52,7 +54,7 @@
             <a href="#" class="nav-link font-weight-bold">Contact </a>
           </li>
           <li class="nav-item">
-            <a href="login.html" class="nav-link font-weight-bold"
+            <a href="login.html" class="nav-link font-weight-bold active"
               >Log In/Sign Up</a
             >
           </li>
@@ -79,39 +81,95 @@
 
     <main>
       <div class="container" id="content" style="margin-top: 30px">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque quo
-        quibusdam officiis provident, suscipit voluptas iusto culpa facilis
-        vitae. Dicta facilis a porro. Voluptatum facilis quam illo labore
-        consectetur quibusdam. Odio itaque delectus deleniti eius optio sequi
-        quis dignissimos nostrum? Doloremque nesciunt quaerat quod tenetur quae
-        commodi, inventore debitis repellendus magnam laborum quia tempore, quo
-        id, placeat sint assumenda minima? Provident atque nobis rerum deleniti
-        placeat fugiat illo suscipit neque, quidem quia. Nulla fugit facere
-        earum velit nesciunt molestias nisi reiciendis, impedit hic, esse sunt
-        laborum? Doloremque quo voluptas nisi! Cumque harum nemo blanditiis
-        laborum distinctio autem non molestiae officiis mollitia quisquam,
-        dicta, quia quasi labore provident dolorem ipsam id aliquid quas saepe
-        fuga minus nesciunt a ullam rem. Neque? Culpa neque voluptatem
-        consequatur, corporis commodi minima sequi deleniti ab provident quae?
-        Tempora, dignissimos rerum facilis laboriosam voluptatum autem alias ad
-        architecto veniam nesciunt deleniti modi laudantium, voluptate ratione
-        similique. Magni dolores ad recusandae quis excepturi labore
-        necessitatibus architecto provident iste aut libero accusamus, aperiam
-        facilis mollitia. Repellat libero dignissimos et, cum eos sint odit?
-        Facere quod voluptas odio atque? Nihil, odio adipisci vel omnis
-        cupiditate repellat ipsam earum consectetur a possimus deserunt dolorem
-        cumque modi quia excepturi molestias rem eos dignissimos nemo deleniti
-        illum provident quasi maxime nulla? Illum? Perspiciatis accusamus
-        temporibus cum dolorum laudantium explicabo vitae quos saepe! Natus,
-        odit suscipit earum beatae vitae fugit sunt numquam quos fugiat, culpa
-        fuga eligendi maiores rem molestias eos? Eveniet, veritatis! Dicta
-        debitis tenetur laborum, reiciendis, expedita cum consequuntur quae,
-        illo odit facere mollitia labore praesentium minima iusto! Id hic,
-        inventore facere est labore maxime iusto sequi nesciunt corporis
-        repudiandae explicabo? Eligendi doloribus iusto odit nulla aspernatur
-        iste amet modi! Facilis ex et ullam, vitae cupiditate modi eligendi
-        voluptas eaque tenetur magnam, iste voluptates veritatis quisquam
-        repellat eum accusamus nam aspernatur.
+        <main class="form-signin w-100 m-auto">
+          <form class="form">
+            <div class="login" id="login">
+              <h1 class="h3 mb-3 fw-normal">Log In</h1>
+
+              <div class="form-floating">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="floatingInput"
+                  placeholder="name@example.com"
+                />
+                <label for="floatingInput">Email address</label>
+              </div>
+              <div class="form-floating">
+                <input
+                  type="password"
+                  class="form-control"
+                  id="floatingPassword"
+                  placeholder="Password"
+                />
+                <label for="floatingPassword">Password</label>
+              </div>
+              <button class="w-100 btn btn-lg btn-primary" type="submit">
+                Log in
+              </button>
+              <p class="">
+                Don't have an account?
+                <span
+                  id="form_change_login"
+                  style="
+                    color: inherit;
+                    cursor: pointer;
+                    text-decoration: underline;
+                  "
+                  onclick="change_to_signup()"
+                  >Sign Up</span
+                >
+              </p>
+            </div>
+            <div class="signup" id="signup">
+              <h1 class="h3 mb-3 fw-normal">Sign Up</h1>
+
+              <div class="form-floating">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="floatingInput"
+                  placeholder="Neev Jain"
+                />
+                <label for="floatingInput">Full Name</label>
+              </div>
+              <div class="form-floating">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="floatingInput"
+                  placeholder="name@example.com"
+                />
+                <label for="floatingInput">Email address</label>
+              </div>
+              <div class="form-floating">
+                <input
+                  type="password"
+                  class="form-control"
+                  id="floatingPassword"
+                  placeholder="Password"
+                />
+                <label for="floatingPassword">Password</label>
+              </div>
+              <button class="w-100 btn btn-lg btn-primary" type="submit">
+                Sign Up
+              </button>
+              <p class="">
+                Already have an account?
+                <span
+                  id="form_change_signup"
+                  style="
+                    color: inherit;
+                    cursor: pointer;
+                    text-decoration: underline;
+                  "
+                  onclick="change_to_login()"
+                  >Log In</span
+                >
+              </p>
+            </div>
+          </form>
+        </main>
       </div>
     </main>
 
@@ -181,11 +239,24 @@
         </div>
       </div>
     </footer>
+
+    <!-- Scripts -->
     <script src="script.js"></script>
     <script>
       $(document).ready(function () {
         dark_light();
       });
+
+      function change_to_login() {
+        console.log("change_to_login");
+        document.getElementById("signup").style.display = "none";
+        document.getElementById("login").style.display = "block";
+      }
+      function change_to_signup() {
+        console.log("change_to_login");
+        document.getElementById("signup").style.display = "block";
+        document.getElementById("login").style.display = "none";
+      }
     </script>
   </body>
 </html>
